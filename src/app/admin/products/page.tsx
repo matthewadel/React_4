@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { PageHeader } from "../_components/PageHeader";
+import { PageHeader } from "@/app/admin/_components/PageHeader";
 import Link from "next/link";
 import {
   Table,
@@ -88,12 +88,19 @@ async function ProductsTable() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <a download href={`/admin/products/${product.id}/download`}>
+                    <a
+                      className="w-full h-full"
+                      download
+                      href={`/admin/products/${product.id}/download`}
+                    >
                       Download
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                    <Link href={`/admin/products/${product.id}/edit`}>
+                    <Link
+                      className="w-full h-full"
+                      href={`/admin/products/${product.id}/edit`}
+                    >
                       Edit
                     </Link>
                   </DropdownMenuItem>
